@@ -10,7 +10,7 @@ def get_db_connection():
         host="localhost",
         user="root",
         passwd="",
-        db="project1",
+        db="",
         port=3306
     )
 
@@ -269,7 +269,7 @@ def admin():
             username = request.form["username"]
             password = request.form["password"]
             # Hardcoded admin credentials
-            if username == "admin" and password == "1234":
+            if username == "admin77" and password == "":
                 session['logged_in'] = True
                 session['username'] = username
                 return redirect(url_for('admin'))
@@ -446,4 +446,5 @@ def assign_provider(booking_id):
 
 
 if __name__ == "__main__":
+
     app.run(debug=True)
